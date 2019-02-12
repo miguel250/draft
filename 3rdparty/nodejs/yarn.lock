@@ -13,6 +13,37 @@
     source-map-support "0.5.9"
     tsutils "2.27.2"
 
+"@types/chrome@^0.0.79":
+  version "0.0.79"
+  resolved "https://registry.yarnpkg.com/@types/chrome/-/chrome-0.0.79.tgz#1c83b35bd9b21b6204fb56e4816a1ea65dc013e5"
+  integrity sha512-4+Xducpig6lpwVX65Hk8KSZwRoURHXMDbd38SDNcV8TBaw4xyJki39fjB1io2h7ip+BsyFvgTm9OxR5qneLPiA==
+  dependencies:
+    "@types/filesystem" "*"
+
+"@types/filesystem@*":
+  version "0.0.29"
+  resolved "https://registry.yarnpkg.com/@types/filesystem/-/filesystem-0.0.29.tgz#ee3748eb5be140dcf980c3bd35f11aec5f7a3748"
+  integrity sha512-85/1KfRedmfPGsbK8YzeaQUyV1FQAvMPMTuWFQ5EkLd2w7szhNO96bk3Rh/SKmOfd9co2rCLf0Voy4o7ECBOvw==
+  dependencies:
+    "@types/filewriter" "*"
+
+"@types/filewriter@*":
+  version "0.0.28"
+  resolved "https://registry.yarnpkg.com/@types/filewriter/-/filewriter-0.0.28.tgz#c054e8af4d9dd75db4e63abc76f885168714d4b3"
+  integrity sha1-wFTor02d11205jq8dviFFocU1LM=
+
+"@types/gapi.client.drive@v3":
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/@types/gapi.client.drive/-/gapi.client.drive-3.0.2.tgz#d869618077390a5cc809db1fbd04ab7381ecae9f"
+  integrity sha512-HXAp0urHZeR233DbdmKyD01IwwQX1BMBS8cEo3ayLmR6k7vpg1I2ZB1CKHrCedlSRt1ZWbkvMMQQuzpROQMcuw==
+  dependencies:
+    "@types/gapi.client" "*"
+
+"@types/gapi.client@*":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/gapi.client/-/gapi.client-1.0.0.tgz#aa42501465fcf6440421050da70ec724d4c4c4df"
+  integrity sha512-8Qau2uDdic2IjLyz10LDZ+nKIjD/f7AjOA3xgGIHLqQ6NM6Z7kfV7HOehJUExy9TlrEwkzEN+Hqct+B8Y4AugQ==
+
 ansi-regex@^2.0.0:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/ansi-regex/-/ansi-regex-2.1.1.tgz#c3b33ab5ee360d86e0e628f0468ae7ef27d654df"

@@ -1,9 +1,0 @@
-{
-  "name": "draft",
-  "version": "0.1.0",
-  "license": "MIT",
-  "devDependencies": {
-    "typescript": "3.3.1",
-    "@bazel/typescript": "0.25.0"
-  }
-}

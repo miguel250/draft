@@ -1,0 +1,11 @@
+{
+  "name": "draft",
+  "version": "0.1.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@bazel/typescript": "0.25.0",
+    "@types/gapi.client.drive": "v3",
+    "@types/chrome": "^0.0.79",
+    "typescript": "3.3.1"
+  }
+}

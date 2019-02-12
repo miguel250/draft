@@ -3,7 +3,15 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "experimentalDecorators": true,
+    "jsx": "react",
+    "rootDirs": [".", "../bazel-bin/examples"],
+    "types": [],
+    "strict": true,
+    "target": "es6",
     "module": "commonjs",
-    "target": "es5",
-    "jsx": "react"
+    "esModuleInterop": true
+  },
+  "paths": {
+    "draft/*": ["*"]
+  }
 }
