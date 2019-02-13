@@ -38,7 +38,7 @@ pkg_tar(
 )
 
 genrule(
-    name = "ext",
+    name = "dev",
     srcs = [
         ":extension_files",
     ],

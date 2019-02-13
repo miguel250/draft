@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+BAZEL_VERSION="0.22.0"
+SCRIPTS_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+BIN_PATH="$SCRIPTS_DIR/.bin"
+BINARY_PATH="$BIN_PATH/bazel-$BAZEL_VERSION-linux-x86_64"
+DOWNLOAD_URL="https://github.com/bazelbuild/bazel/releases/download/$BAZEL_VERSION/bazel-$BAZEL_VERSION-linux-x86_64"
+PLATFORM=$(echo "$(uname)" | awk '{print tolower($0)}')
+
+if  [ ! -f "$BINARY_PATH" ];
+then
+
+  echo "Downloading Bazel $BAZEL_VERSION"
+  rm -f ./bin/bazel-* > /dev/null 2>&1
+  mkdir $BIN_PATH  > /dev/null 2>&1
+
+
+  if which wget > /dev/null 2>&1
+  then
+    wget "$DOWNLOAD_URL" -O "$BINARY_PATH"
+  # elif command -v curl > /dev/null; then
+  else
+    echo "curl or wget need to be installed"
+  fi
+  chmod +x $BINARY_PATH
+fi
+
+exec $BINARY_PATH "$@"
