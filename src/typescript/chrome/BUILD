@@ -25,6 +25,7 @@ filegroup(
     name = "extension_files",
     srcs = [
         ":background.js",
+        "//src/html/chrome",
         "//src/resources/chrome:files",
     ],
 )

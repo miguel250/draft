@@ -4,9 +4,9 @@
   "version": "0.1.0",
   "description": "Draft is a note taking extension",
   "manifest_version": 2,
+  "browser_action": {},
   "background": {
     "scripts": [
-      "gapi.js",
       "background.js"
     ],
     "persistent": false

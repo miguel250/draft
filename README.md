@@ -9,3 +9,5 @@ Draft is a note taking application inspirated by [notable](https://github.com/no
 * Click `Load Unpacked` and go to codebase path
   `{codebase}/bazel-genfiles/src/typescript/chrome/unpacked`
 
+#### Code Formatting
+*  `bazel run :fmt -- -r --baseDir src/typescript`
