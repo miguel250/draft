@@ -1,0 +1,5 @@
+import "chrome"
+
+chrome.runtime.onInstalled.addListener(details => {
+  console.log('previousVersion', details.previousVersion)
+})
