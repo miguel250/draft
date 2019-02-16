@@ -1,5 +1,5 @@
 # Draft
-Draft is a note taking application inspirated by [notable](https://github.com/notable/notable).
+Draft is a note taking application inspired by [notable](https://github.com/notable/notable).
 
 
 ### Development
@@ -11,3 +11,7 @@ Draft is a note taking application inspirated by [notable](https://github.com/no
 
 #### Code Formatting
 *  `bazel run :fmt -- -r --baseDir src/typescript`
+
+#### Notes
+* For editor support run `bazel run @nodejs//:bin/yarn -- --cwd 3rdparty/nodejs/`
+* To add a module use `bazel run @nodejs//:bin/yarn -- --cwd 3rdparty/nodejs/ add react`

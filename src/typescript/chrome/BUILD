@@ -5,27 +5,39 @@ load("@npm_bazel_typescript//:defs.bzl", "ts_library")
 load("@bazel_tools//tools/build_defs/pkg:pkg.bzl", "pkg_tar")
 
 ts_library(
-    name = "app",
-    srcs = ["app.ts"],
+    name = "background",
+    srcs = ["background.ts"],
     deps = [
         "@npm//@types/chrome",
     ],
 )
 
 rollup_bundle(
-    name = "background",
-    entry_point = "src/typescript/chrome/app",
+    name = "background_bundle",
+    entry_point = "src/typescript/chrome/background",
     globals = {
         "chrome": "chrome",
     },
-    deps = [":app"],
+    deps = [":background"],
+)
+
+rollup_bundle(
+    name = "index_bundle",
+    entry_point = "src/typescript/draft/index",
+    globals = {
+        "react-dom": "ReactDOM",
+        "react": "React",
+    },
+    deps = [
+        "//src/typescript/draft",
+    ],
 )
 
 filegroup(
     name = "extension_files",
     srcs = [
-        ":background.js",
-        "//src/html/chrome",
+        ":background_bundle.js",
+        ":index_bundle.js",
         "//src/resources/chrome:files",
     ],
 )
@@ -33,6 +45,8 @@ filegroup(
 pkg_tar(
     name = "extension_tar",
     srcs = [
+        "@npm//node_modules/react:umd/react.production.js",
+        "@npm//node_modules/react-dom:umd/react-dom.production.js",
         ":extension_files",
     ],
     package_dir = "/",
@@ -42,6 +56,9 @@ genrule(
     name = "dev",
     srcs = [
         ":extension_files",
+        "//src/html/chrome/dev",
+        "@npm//node_modules/react:umd/react.development.js",
+        "@npm//node_modules/react-dom:umd/react-dom.development.js",
     ],
     outs = ["unpacked"],
     cmd = """

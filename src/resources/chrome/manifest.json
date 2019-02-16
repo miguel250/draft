@@ -7,7 +7,7 @@
   "browser_action": {},
   "background": {
     "scripts": [
-      "background.js"
+      "background_bundle.js"
     ],
     "persistent": false
   },
