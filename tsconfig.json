@@ -1,41 +1,42 @@
 {
-	"compilerOptions": {
-		"jsx": "react",
-		"sourceMap": true,
-		"emitDecoratorMetadata": true,
-		"experimentalDecorators": true,
-		"alwaysStrict": true,
-		"lib": [
-			"es2018",
-			"dom"
-		],
-		"noImplicitAny": true,
-		"types": [],
-		"strict": true,
-		"outDir": "./.out",
-		"baseUrl": ".",
-		"rootDirs": [
-			".",
-			"bazel-out/k8-fastbuild/genfiles",
-			"bazel-out/k8-fastbuild/bin"
-		],
-		"paths": {
+  "compilerOptions": {
+    "newLine": "LF",
+    "jsx": "react",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "alwaysStrict": true,
+    "lib": [
+      "es2018",
+      "dom"
+    ],
+    "noImplicitAny": true,
+    "types": [],
+    "strict": true,
+    "outDir": "./.out",
+    "baseUrl": ".",
+    "rootDirs": [
+      ".",
+      "bazel-out/k8-fastbuild/genfiles",
+      "bazel-out/k8-fastbuild/bin"
+    ],
+    "paths": {
       "*": [
         "./3rdparty/nodejs/node_modules/*",
         "./3rdparty/nodejs/node_modules/@types/*"
       ],
-			"draft/*": [
-				"./*",
-				"./bazel-out/k8-fastbuild/genfiles/*",
-				"./bazel-out/k8-fastbuild/bin/*"
-			]
-		}
-	},
+      "draft/*": [
+        "./*",
+        "./bazel-out/k8-fastbuild/genfiles/*",
+        "./bazel-out/k8-fastbuild/bin/*"
+      ]
+    }
+  },
   "bazelOptions": {
     "suppressTsconfigOverrideWarnings": true
   },
   "exclude": [
-		".git",
-		"./3rdparty/nodejs/node_modules"
+    ".git",
+    "./3rdparty/nodejs/node_modules"
   ]
 }
