@@ -1,7 +1,19 @@
 import * as React from "react";
 
-export class Preview extends React.Component {
+type PreviewProps = {
+  value: string;
+}
+
+type PreviewState = {
+  value: string;
+}
+
+export class Preview extends React.Component<PreviewProps, PreviewState> {
+  constructor(props: PreviewProps) {
+    super(props)
+  }
+
   render() {
-    return <div className="preview"></div>
+    return <div className="preview">{this.props.value}</div>
   }
 }
