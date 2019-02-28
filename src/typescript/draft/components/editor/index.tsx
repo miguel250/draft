@@ -1,8 +1,8 @@
 import * as React from "react";
 
 type EditorProps = {
-  onEditorChange(value: string): void
-}
+  onEditorChange(value: string): void,
+};
 
 export class Editor extends React.Component<EditorProps, {}> {
   constructor(props: EditorProps) {
@@ -11,11 +11,11 @@ export class Editor extends React.Component<EditorProps, {}> {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  private handleChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
-    this.props.onEditorChange(event.target.value);
+  public render() {
+    return <textarea onChange={this.handleChange} />;
   }
 
-  render() {
-    return <textarea onChange={this.handleChange}></textarea>;
+  private handleChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
+    this.props.onEditorChange(event.target.value);
   }
 }

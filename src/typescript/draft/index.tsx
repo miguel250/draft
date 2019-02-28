@@ -5,5 +5,5 @@ import { App } from "draft/src/typescript/draft/components/app";
 
 ReactDOM.render(
   <App />,
-  document.getElementById("root")
+  document.getElementById("root"),
 );
