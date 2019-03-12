@@ -1,0 +1,14 @@
+{
+  "extends": ["tslint:latest", "tslint-react"],
+  "rules": {
+    "semicolon": [true, "always"],
+    "no-implicit-dependencies": false,
+    "interface-over-type-literal": false,
+    "no-submodule-imports": false,
+    "max-line-length": {
+      "options": [80]
+    },
+    "indent": [true, "space", 2]
+  },
+  "encoding": true
+}

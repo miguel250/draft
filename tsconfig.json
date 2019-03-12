@@ -30,7 +30,13 @@
         "./bazel-out/k8-fastbuild/genfiles/*",
         "./bazel-out/k8-fastbuild/bin/*"
       ]
-    }
+    },
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "configFile": "3rdparty/nodejs/tslint.json"
+      }
+    ]
   },
   "bazelOptions": {
     "suppressTsconfigOverrideWarnings": true
