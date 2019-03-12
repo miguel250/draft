@@ -18,11 +18,16 @@ then
   if which wget > /dev/null 2>&1
   then
     wget "$DOWNLOAD_URL" -O "$BINARY_PATH"
-  # elif command -v curl > /dev/null; then
   else
     echo "curl or wget need to be installed"
   fi
   chmod +x $BINARY_PATH
+fi
+
+# make sure to create a symbolic of node_modules in the project's root
+# to not break other tools outside from bazel.
+if [ ! -L "node_modules" ]; then
+ ln -s $SCRIPTS_DIR/3rdparty/nodejs/node_modules $SCRIPTS_DIR/
 fi
 
 exec $BINARY_PATH "$@"
