@@ -2,9 +2,9 @@ workspace(name = "draft")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-NODEJS_BAZEL_VERSION = "0.18.5"
+NODEJS_BAZEL_VERSION = "0.27.5"
 
-NODEJS_BAZEL_SHA = "c8cd6a77433f7d3bb1f4ac87f15822aa102989f8e9eb1907ca0cad718573985b"
+NODEJS_BAZEL_SHA = "02506a501974b6803e9756a4e655f2e1e79d2eafa474154e83b07289f3abab0d"
 
 NODEJS_VERSION = "10.13.0"
 
@@ -38,6 +38,5 @@ load("@npm//:install_bazel_dependencies.bzl", "install_bazel_dependencies")
 
 install_bazel_dependencies()
 
-load("@npm_bazel_typescript//:defs.bzl", "ts_setup_workspace")
-
+load("@npm_bazel_typescript//:index.bzl", "ts_setup_workspace")
 ts_setup_workspace()

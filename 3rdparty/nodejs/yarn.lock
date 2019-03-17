@@ -2,12 +2,18 @@
 # yarn lockfile v1
 
 
-"@bazel/typescript@0.25.0":
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.25.0.tgz#ad50ef443b3044a2a399989c0b4068f2a2cacb6b"
-  integrity sha512-yV1UaqF6JVg5iTCy9vMtM82LJLWvW2L6CirnuE0HNfUL9JnkEY2+YFcXrfG/TsBZilDfB7bx2w3NkxfBqnW0Dg==
+"@bazel/jasmine@^0.27.5":
+  version "0.27.5"
+  resolved "https://registry.yarnpkg.com/@bazel/jasmine/-/jasmine-0.27.5.tgz#eeedbd5fac28651b4dba302e8c67a5bf94b7ffb3"
+  integrity sha512-q494feTqj3rzWiVOU8w1Phm4NK8MN0eT3jcGK1FKHxgPwZAf9wOZ/+z30yWp/uWTrjyrMWRi569bhJWMgEyKww==
   dependencies:
-    jasmine-core "2.8.0"
+    jasmine "~3.3.1"
+
+"@bazel/typescript@^0.27.5":
+  version "0.27.5"
+  resolved "https://registry.yarnpkg.com/@bazel/typescript/-/typescript-0.27.5.tgz#0fbdd0fb569dfa255807d23718e6e432b4e9f477"
+  integrity sha512-7hN3+1+YKF1HfdV2KgmYylhbs0jT/wkE2yVLGU5r/+lSjCzD6hBDqMlXV6Z7N3kzRQKZFg5pj0JQi/Lwqlq48Q==
+  dependencies:
     protobufjs "5.0.3"
     semver "5.6.0"
     source-map-support "0.5.9"
@@ -43,6 +49,11 @@
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@types/gapi.client/-/gapi.client-1.0.1.tgz#620860ae183d849e513d44b4f0422c89b8a1fc91"
   integrity sha512-/SjoU65jvBZlDQtw12OB9YCrqKQrrAdG4YpVTH4AJaJDCOkFdGXcDA2IFTm3d2UCeQwmqM/o6tNlyjKINO6MNg==
+
+"@types/jasmine@^3.3.10":
+  version "3.3.10"
+  resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.3.10.tgz#5b90c8e74246487e8810100ddc2547ffc94d31f6"
+  integrity sha512-F4yCbIk3Tgj7j+/cR5qtE5rQHVFyd7vOuG4zqeykztN99SSVCKwiPIea2Q/nVJbC6GJXbtaNKSyFVtMCkoRngA==
 
 "@types/node@^10.11.7":
   version "10.12.26"
@@ -268,7 +279,7 @@ get-caller-file@^1.0.2:
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-1.0.3.tgz#f978fa4c90d1dfe7ff2d6beda2a515e713bdcf4a"
   integrity sha512-3t6rVToeoZfYSGd8YoLFR2DJkiQrIiUrGcjvFX2mDw3bn6k2OtwHN0TNCLbBO+w8qTvimhDkv+LSscbJY1vE6w==
 
-glob@^7.0.5, glob@^7.1.1:
+glob@^7.0.5, glob@^7.0.6, glob@^7.1.1:
   version "7.1.3"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.3.tgz#3960832d3f1574108342dafd3a67b332c0969df1"
   integrity sha512-vcfuiIxogLV4DlGBHIUOwI0IbrJ8HWPc4MU7HzviGeNho/UJDfi6B5p3sHeWIQ0KGIU0Jpxi5ZHxemQfLkkAwQ==
@@ -317,10 +328,18 @@ is-fullwidth-code-point@^1.0.0:
   dependencies:
     number-is-nan "^1.0.0"
 
-jasmine-core@2.8.0:
-  version "2.8.0"
-  resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-2.8.0.tgz#bcc979ae1f9fd05701e45e52e65d3a5d63f1a24e"
-  integrity sha1-vMl5rh+f0FcB5F5S5l06XWPxok4=
+jasmine-core@~3.3.0:
+  version "3.3.0"
+  resolved "https://registry.yarnpkg.com/jasmine-core/-/jasmine-core-3.3.0.tgz#dea1cdc634bc93c7e0d4ad27185df30fa971b10e"
+  integrity sha512-3/xSmG/d35hf80BEN66Y6g9Ca5l/Isdeg/j6zvbTYlTzeKinzmaTM4p9am5kYqOmE05D7s1t8FGjzdSnbUbceA==
+
+jasmine@~3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jasmine/-/jasmine-3.3.1.tgz#d61bb1dd8888859bd11ea83074a78ee13d949905"
+  integrity sha512-/vU3/H7U56XsxIXHwgEuWpCgQ0bRi2iiZeUpx7Nqo8n1TpoDHfZhkPIc7CO8I4pnMzYsi3XaSZEiy8cnTfujng==
+  dependencies:
+    glob "^7.0.6"
+    jasmine-core "~3.3.0"
 
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
