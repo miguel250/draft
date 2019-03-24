@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "license": "MIT",
   "devDependencies": {
-    "@bazel/jasmine": "^0.27.5",
-    "@bazel/typescript": "^0.27.5",
+    "@bazel/jasmine": "^0.27.7",
+    "@bazel/typescript": "^0.27.7",
     "@types/chrome": "^0.0.79",
     "@types/gapi.client.drive": "v3",
     "@types/jasmine": "^3.3.10",
