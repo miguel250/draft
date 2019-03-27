@@ -2,9 +2,9 @@ workspace(name = "draft")
 
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
-NODEJS_BAZEL_VERSION = "0.27.7"
+NODEJS_BAZEL_VERSION = "0.27.8"
 
-NODEJS_BAZEL_SHA = "fb87ed5965cef93188af9a7287511639403f4b0da418961ce6defb9dcf658f51"
+NODEJS_BAZEL_SHA = "88e5e579fb9edfbd19791b8a3c6bfbe16ae3444dba4b428e5efd36856db7cf16"
 
 NODEJS_VERSION = "10.13.0"
 
