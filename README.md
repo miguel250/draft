@@ -13,6 +13,9 @@ Draft is a note taking application inspired by [notable](https://github.com/nota
 * `./bazel run @nodejs//:bin/yarn -- --cwd 3rdparty/nodejs/ fmt`
 * `./bazel run @nodejs//:bin/yarn -- --cwd 3rdparty/nodejs/ lint`
 
+#### Run tests
+* `./bazel test //tests/...`
+
 #### Notes
 * For editor support run `./bazel run @nodejs//:bin/yarn -- --cwd 3rdparty/nodejs/`
 * To add a module use `./bazel run @nodejs//:bin/yarn -- --cwd 3rdparty/nodejs/ add react`
