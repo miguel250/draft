@@ -1,0 +1,4 @@
+test --test_output=errors
+
+run --nolegacy_external_runfiles
+test --nolegacy_external_runfiles
