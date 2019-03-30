@@ -21,5 +21,5 @@ Draft is a note taking application inspired by [notable](https://github.com/nota
 * To add a module use `./bazel run @nodejs//:bin/yarn -- --cwd 3rdparty/nodejs/ add react`
 
 #### Troubleshooting
-*  no such attribute '*' in '****' rule
+*  no such attribute '\*' in '\*' rule
   * Run `./bazel clean --expunge --async`
