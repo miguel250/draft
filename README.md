@@ -1,4 +1,4 @@
-# Draft
+# Draft [![Build Status](https://travis-ci.com/miguel250/draft.svg?branch=master)](https://travis-ci.com/miguel250/draft)
 Draft is a note taking application inspired by [notable](https://github.com/notable/notable).
 
 
