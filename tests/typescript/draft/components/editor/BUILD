@@ -19,7 +19,8 @@ ts_library(
 )
 
 jasmine_node_test(
-    name = "test",
+    name = "editor",
+    coverage = True,
     deps = [
         ":test_lib",
     ],
