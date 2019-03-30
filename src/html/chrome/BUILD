@@ -4,5 +4,6 @@ filegroup(
     name = "chrome",
     srcs = [
         "index.html",
+        "//src/sass/chrome",
     ],
 )

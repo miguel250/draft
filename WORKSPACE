@@ -40,3 +40,18 @@ install_bazel_dependencies()
 
 load("@npm_bazel_typescript//:index.bzl", "ts_setup_workspace")
 ts_setup_workspace()
+
+http_archive(
+    name = "io_bazel_rules_sass",
+    url = "https://github.com/bazelbuild/rules_sass/archive/1.17.3.zip",
+    strip_prefix = "rules_sass-1.17.3",
+    sha256 = "ea79647e5cd36867568d80811a951c7b3170791058f50a5cbd3d542627e78881",
+)
+
+load("@io_bazel_rules_sass//:package.bzl", "rules_sass_dependencies")
+rules_sass_dependencies()
+
+load("@io_bazel_rules_sass//:defs.bzl", "sass_repositories")
+sass_repositories()
+
+

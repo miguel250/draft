@@ -12,7 +12,9 @@ export class Editor extends React.Component<EditorProps, {}> {
   }
 
   public render() {
-    return <textarea onChange={this.handleChange} />;
+    return (
+      <textarea className="editor" onChange={this.handleChange} />
+    );
   }
 
   private handleChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
