@@ -6,7 +6,7 @@ sass_library(
     name = "deps",
     srcs = [
         "//3rdparty/nodejs/css/cssremedy",
-        "//src/sass/draft/components/editor",
+        "//src/sass/draft/components/app",
     ],
 )
 

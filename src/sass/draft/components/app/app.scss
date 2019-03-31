@@ -1,0 +1,18 @@
+@import "src/sass/draft/components/sidebar/sidebar";
+@import "src/sass/draft/components/editor/editor";
+@import "src/sass/draft/components/preview/preview";
+
+#main{
+  min-height: 100vh;
+}
+
+.container {
+  min-height:  100vh;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+}
+
+.container > * {
+  flex-wrap: nowrap;
+}

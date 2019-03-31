@@ -25,7 +25,7 @@ export class App extends React.Component<AppProps, AppState> {
     const value: string = this.state.value;
 
     return (
-      <div>
+      <div className="container">
         <Sidebar />
         <Editor onEditorChange={this.handleEditorChange} />
         <Preview value={value} />

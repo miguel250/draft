@@ -13,11 +13,17 @@ export class Editor extends React.Component<EditorProps, {}> {
 
   public render() {
     return (
-      <textarea className="editor" onChange={this.handleChange} />
+      <div className="editor">
+        <div
+          className="textarea"
+          contentEditable={true}
+          onInput={this.handleChange}
+        />
+      </div>
     );
   }
 
-  private handleChange(event: React.ChangeEvent<HTMLTextAreaElement>) {
-    this.props.onEditorChange(event.target.value);
+  private handleChange(event: React.ChangeEvent<HTMLInputElement>) {
+    this.props.onEditorChange(event.target.innerText);
   }
 }
