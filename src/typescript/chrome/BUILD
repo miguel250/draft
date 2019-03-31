@@ -29,6 +29,7 @@ rollup_bundle(
         "react": "React",
     },
     deps = [
+        "@npm//showdown",
         "//src/typescript/draft",
     ],
 )

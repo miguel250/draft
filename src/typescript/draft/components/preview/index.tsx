@@ -1,4 +1,5 @@
 import * as React from "react";
+import showdown from "showdown";
 
 type PreviewProps = {
   value: string;
@@ -14,6 +15,13 @@ export class Preview extends React.Component<PreviewProps, PreviewState> {
   }
 
   public render() {
-    return <div className="preview">{this.props.value}</div>;
+    const converter = new showdown.Converter();
+    converter.setFlavor("github");
+    const html = converter.makeHtml(this.props.value);
+    return (
+      <div
+        className="preview"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />);
   }
 }

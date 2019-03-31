@@ -6,6 +6,8 @@ ts_library(
     name = "preview",
     srcs = ["index.tsx"],
     deps = [
+        "@npm//showdown",
+        "@npm//@types/showdown",
         "@npm//@types/react",
     ],
 )
