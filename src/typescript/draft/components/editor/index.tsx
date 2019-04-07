@@ -17,6 +17,7 @@ export class Editor extends React.Component<EditorProps, {}> {
         <div
           className="textarea"
           contentEditable={true}
+          spellCheck={true}
           onInput={this.handleChange}
         />
       </div>
